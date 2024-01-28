@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}}</title>
+</head>
+<body>
+    <form action="{{location}}" method="post">
+        <input type="text" name="title", value="{{title}}">
+        <br>
+        <input name="contents" value="{{contents}}" placeholder="Writting ur mind on this board" style="width:500px;height:200px">
+        <br>
+        <input type="submit" value="submit">
+    </form>
+    <input type="button" value="cancel" onclick="history.back()">
+</body>
+</html>

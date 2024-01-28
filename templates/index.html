@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+</head>
+<body>
+    <h1>hello, {{name}}</h1>
+    {% if name %}
+        <a href="/logout">logout</a>
+        <a href="/chat">chat</a>
+        <a href="/bbs">bbs</a>
+        <br>
+        <br>
+        <input type="button" value="Edit account" onclick="location.href='/edit/account'">
+        <input type="button" value="homework" onclick="location.href='/housework'">
+        <form action="/delete/account" method="post">
+            
+            <button type="submit" name="delete">Delete account</button>
+        </form>
+
+
+
+
+    {% endif %}
+
+
+    
+</body>
+</html>

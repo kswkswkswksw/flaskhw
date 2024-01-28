@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBS</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>name</th>
+            <th>title</th>
+            <th>views</th>
+        </tr>
+        {% for name, _, title, _,views, contents_id in info %}
+        <tr>
+            <td>{{name}}</td>
+            <td><a href="?q={{contents_id}}">{{title}}</a></td>
+            <td>{{views}}</td>
+        </tr>
+        {% endfor %} 
+
+        
+    </table>
+    {% if sesscheck %}
+        <input type="button" value="Write up" onclick="location.href='/write_up';">
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBS</title>
+</head>
+<body>
+    <h2>{{title}}</h2>
+    <b><p>{{name}}</p></b>
+    <p>{{contents}}</p>
+    <br>
+    <p>{{views}}</p>
+    <input type="button" value="Before" onclick="location.href='/bbs'">
+    {% if trigger %}
+        <form action="/delete/contents" method="post">
+            <button type="submit" name="delete" >Delete</button>
+        </form>
+        <input type="button" value="Edit" onclick="location.href='/edit/contents'">
+    {% endif %}
+</body>
+</html>
